@@ -35,8 +35,11 @@
         const strURL = 'https://api.open-meteo.com/v1/forecast?latitude=36.1628&longitude=-85.5016&current=temperature_2m,precipitation,cloud_cover&minutely_15=temperature_2m,relative_humidity_2m&hourly=temperature_2m,cloud_cover&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch'
         $.getJSON(strURL).then(objData => {
             console.log(objData.current.temperature_2m)
+            console.log(objData.minutely_15.relative_humidity_2m)
+            console.log(objData.hourly.cloud_cover)
+
             let strTemp = objData.current.temperature_2m
-            let srtHum = objData.minutely_15.relative_humidity
+            let srtHum = objData.minutely_15.relative_humidity_2m
             let srtCloud = objData.hourly.cloud_cover
 
             $('#txtTemp').append(`<h2>${strTemp}</h2>`)
