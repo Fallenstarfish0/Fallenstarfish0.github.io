@@ -37,8 +37,8 @@
             let strHum = objData.minutely_15.relative_humidity_2m
             let strCloud = objData.hourly.cloud_cover
 
-            $('#txtTemp').append(`<h2 class="text-secondary">${strTemp}°F</h2>`)
-            $('#txtHumidity').append(`<h2 class="text-light">${strHum.at(0)}%</h2>`)
+            $('#txtTemp').append(`<h2 class="text-dark">${strTemp}°F</h2>`)
+            $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud.at(0)}</h2>`)
         })
     </script>
