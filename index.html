@@ -13,12 +13,15 @@
             <div class="card bg-transparent d-flex justify-content-center align-items-center border border-0 ">
                 <div class="card bg-transparent col-4 justify-content-center align-items-center border border-0 ">
                     <div id="txtTemp" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
+                        <h3 class="text-dark">Temperature</h3>
                         <h1 class="text-primary bi bi-thermometer-low"></h1>
                     </div>
                     <div  id="txtHumidity" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
+                        <h3 class="text-dark">Humidity</h3>
                         <h1 class="text-primary bi bi-droplet-half"></h1>
                     </div>
                     <div id="txtCloud" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
+                        <h3 class="text-dark">Cloudiness</h3>
                         <h1 class="text-primary bi bi-clouds"></h1>
                     </div>
                 </div>
@@ -50,9 +53,9 @@
             $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
 
-            $('#txtTemp').append(`<h3 class="text-dark">Temperature</h3>`)
-            $('#txtHumidity').append(`<h3 class="text-dark">Humidity</h3>`)
-            $('#txtCloud').append(`<h3 class="text-dark">Cloudiness</h3>`)
+            // $('#txtTemp').append(`<h3 class="text-dark">Temperature</h3>`)
+            // $('#txtHumidity').append(`<h3 class="text-dark">Humidity</h3>`)
+            // $('#txtCloud').append(`<h3 class="text-dark">Cloudiness</h3>`)
         })
     }
     </script>
