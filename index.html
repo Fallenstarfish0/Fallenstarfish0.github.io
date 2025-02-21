@@ -12,18 +12,15 @@
             <div class="card bg-transparent d-flex justify-content-center align-items-center border border-0 ">
                 <div class="card bg-transparent col-4 justify-content-center align-items-center border border-0 ">
                     <div id="txtTemp" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
-                        <h1 class="bi bi-thermometer-low"></h1>
+                        <h1 class="text-primary bi bi-thermometer-low"></h1>
                     </div>
                     <div  id="txtHumidity" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
-                        <h1 class="bi bi-droplet-half"></h1>
+                        <h1 class="text-primary bi bi-droplet-half"></h1>
                     </div>
                     <div id="txtCloud" class="card bg-transparent col-12 justify-content-center align-items-center border border-0 ">
-                        <h1 class="bi bi-clouds"></h1>
+                        <h1 class="text-primary bi bi-clouds"></h1>
                     </div>
                 </div>
-            
-            <!-- <h1 class="text-center mb-0">SwollenHippo</h1> -->
-            <!-- <h2 class="text-center mb-3">Administrator Login</h2> -->
             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -40,9 +37,9 @@
             let strHum = objData.minutely_15.relative_humidity_2m
             let strCloud = objData.hourly.cloud_cover
 
-            $('#txtTemp').append(`<h2>${strTemp}</h2>`)
-            $('#txtHumidity').append(`<h2>${strHum.at(0)}%</h2>`)
-            $('#txtCloud').append(`<h2>${strCloud.at(0)}</h2>`)
+            $('#txtTemp').append(`<h2 class="text-dark">${strTemp}</h2>`)
+            $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
+            $('#txtCloud').append(`<h2 class="text-dark">${strCloud.at(0)}</h2>`)
         })
     </script>
 </body>
