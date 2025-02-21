@@ -39,8 +39,8 @@
             console.log(objData.hourly.cloud_cover)
 
             let strTemp = objData.current.temperature_2m
-            let srtHum = objData.minutely_15.relative_humidity_2m
-            let srtCloud = objData.hourly.cloud_cover
+            let strHum = objData.minutely_15.relative_humidity_2m
+            let strCloud = objData.hourly.cloud_cover
 
             $('#txtTemp').append(`<h2>${strTemp}</h2>`)
             $('#txtHumidity').append(`<h2>${strHum}%</h2>`)
