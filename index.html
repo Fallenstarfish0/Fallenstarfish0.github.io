@@ -10,29 +10,9 @@
 <body class="bg-light">
     <div class="d-flex  justify-content-center align-items-center col-12 border border-0 vh-100  ">
         <div class="card bg-transparent col-12 col-md-8 col-lg-6 mt-5 border border-0"> 
-            <!-- <div class=" card bg-transparent d-flex justify-content-center align-items-center border border-0 ">
-                <div class="row card bg-transparent col-12 col-md-8 col-lg-6 justify-content-center border border-0 ">
-                    <div id="txtTemp" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
-                        <h3 class="text-light">Temperature</h3>
-                        <h1 class="text-primary bi bi-thermometer-low"></h1>
-                    </div>
-                    <div id="txtSpeed" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
-                        <h3 class="text-light">Wind Speed</h3>
-                        <h1 class="text-primary bi bi-wind"></h1>
-                    </div>
-                    <div  id="txtHumidity" class="card bg-secondary rounded col-12 mt-4 justify-content-center align-items-center border border-dark ">
-                        <h3 class="text-dark">Humidity</h3>
-                        <h1 class="text-primary bi bi-droplet-half"></h1>
-                    </div>
-                    <div id="txtCloud" class="card bg-transparent rounded col-12 mt-4 justify-content-center align-items-center border border-dark ">
-                        <h3 class="text-dark">Cloudiness</h3>
-                        <h1 class="text-primary bi bi-clouds"></h1>
-                    </div>
-                </div> 
-            </div> -->
             <div class="row card d-flex justify-content-center align-items-center col-12">
                 <div class="bg-transparent d-flex justify-content-center align-items-center col-12">
-                    <div class="card-body col-6 border border-0">
+                    <div class="card-body col-12 border border-0">
                         <div class="card bg-secondary rounded col-6 justify-content-center align-items-center border border-0 h-100">
                             <div id="txtRise"></div>  
                             <div id="txtSet"></div>  
@@ -78,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body col-6 border border-0">
+                    <div class="card-body col-12 border border-0">
                         <div class="card bg-secondary rounded col-6 justify-content-center align-items-center border border-0 h-100">
                             <div id="txtLight"></div>  
                             <div id="txtShine"></div>  
@@ -120,6 +100,10 @@
             let strLight = objData.daily.daylight_duration
             let strShine = objData.daily.sunshine_duration
 
+            let strShineIndex = strShine.at(0)
+            let strShineMin = strShineIndex/60
+            let strShineHr = strShineMin/60
+
 
 
             $('#txtTemp').append(`<h2 class="text-light">${strTemp}°F</h2>`)
@@ -145,7 +129,7 @@
             $('#txtRise').append(`<h2 class="text-dark">${strRise.at(0).slice(11,16)}</h2>`)
             $('#txtSet').append(`<h2 class="text-dark">${strSet.at(0).slice(11,16)}</h2>`)
             $('#txtLight').append(`<h2 class="text-dark">${strLight.at(0)}Hours</h2>`)
-            $('#txtShine').append(`<h2 class="text-dark">${strShine.at(0)}Hours</h2>`)
+            $('#txtShine').append(`<h2 class="text-dark">${strShineHr}Hours</h2>`)
 
         })
     }
