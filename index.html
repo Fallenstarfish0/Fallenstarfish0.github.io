@@ -12,9 +12,13 @@
         <form class="card bg-transparent col-12 col-md-8 col-lg-5 mt-5 border border-0" id="frmLogin"> 
             <div class="card bg-transparent d-flex justify-content-center align-items-center border border-0 ">
                 <div class="card bg-transparent col-12 col-md-8 col-lg-5 justify-content-center align-items-center border border-0 ">
-                    <div id="txtTemp" class="card bg-dark rounded col-12 justify-content-center align-items-center border border-dark ">
+                    <div id="txtTemp" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
                         <h3 class="text-light">Temperature</h3>
                         <h1 class="text-primary bi bi-thermometer-low"></h1>
+                    </div>
+                    <div id="txtSpeed" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
+                        <h3 class="text-light">Wind Speed</h3>
+                        <h1 class="text-primary bi bi-wind"></h1>
                     </div>
                     <div  id="txtHumidity" class="card bg-secondary rounded col-12 mt-4 justify-content-center align-items-center border border-dark ">
                         <h3 class="text-dark">Humidity</h3>
@@ -63,7 +67,7 @@
             $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
 
-            $('#txtTemp').append(`<h2 class="text-light">${strSpeed}</h2>`)
+            $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}</h2>`)
             $('#txtHumidity').append(`<h2 class="text-dark">${strDir}</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strGust}</h2>`)
         })
