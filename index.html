@@ -118,6 +118,15 @@
             let strLight = objData.daily.daylight_duration
             let strShine = objData.daily.sunshine_duration
 
+            strRise = strRise.toISOString();
+            strSet = strSet.toISOString();
+
+            let strLightMin = strLight/60;
+            strLight = strLightMin/60;
+
+            let strShineMin = strLight/60;
+            strShine = strLightMin/60;
+
 
             $('#txtTemp').append(`<h2 class="text-light">${strTemp}°F</h2>`)
             $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
@@ -139,10 +148,10 @@
                 $('#txtDir').append(`<h2 class="text-dark">${strDir}°W</h2>`)
             }
 
-            $('#txtRise').append(`<h2 class="text-dark">${strRise.at(0)}%</h2>`)
-            $('#txtSet').append(`<h2 class="text-dark">${strSet.at(0)}%</h2>`)
-            $('#txtLight').append(`<h2 class="text-dark">${strLight.at(0)}%</h2>`)
-            $('#txtShine').append(`<h2 class="text-dark">${strShine.at(0)}%</h2>`)
+            $('#txtRise').append(`<h2 class="text-dark">${strRise.at(0)}</h2>`)
+            $('#txtSet').append(`<h2 class="text-dark">${strSet.at(0)}</h2>`)
+            $('#txtLight').append(`<h2 class="text-dark">${strLight.at(0)}Hours</h2>`)
+            $('#txtShine').append(`<h2 class="text-dark">${strShine.at(0)}Hours</h2>`)
 
         })
     }
