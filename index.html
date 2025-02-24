@@ -35,7 +35,7 @@
                     <div class="card-body col-6 pl-0 pr-0 border border-0">
                         <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtTemp"></div></div>
                         <div class="card bg-secondary rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtHumidity"></div></div>
-                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center border border-dark"><div id="txtCloud"></div></div>
+                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtCloud"></div></div>
                     </div>
                     <div class="card-body col-6 pl-0 pr-0 border border-0">
                         <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtSpeed"></div></div>
@@ -83,8 +83,20 @@
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
 
             $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}MPH</h2>`)
-            $('#txtDir').append(`<h2 class="text-dark">${strDir}</h2>`)
             $('#txtGust').append(`<h2 class="text-dark">${strGust}</h2>`)
+
+            if(strDir >= 0 && strDir < 45 || strDir >= 315 && strDir < 360){
+                $('#txtDir').append(`<h2 class="text-dark">${strDir}°N</h2>`)
+            }
+            if(strDir >= 45 && strDir < 135){
+                $('#txtDir').append(`<h2 class="text-dark">${strDir}°E</h2>`)
+            }
+            if(strDir >= 135 && strDir < 225){
+                $('#txtDir').append(`<h2 class="text-dark">${strDir}°S</h2>`)
+            }
+            if(strDir >= 225 && strDir < 315){
+                $('#txtDir').append(`<h2 class="text-dark">${strDir}°W</h2>`)
+            }
         })
     }
     </script>
