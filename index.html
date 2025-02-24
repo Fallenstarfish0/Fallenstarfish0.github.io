@@ -33,7 +33,8 @@
             <div class="row card d-flex justify-content-center align-items-center col-12">
                 <div class="bg-transparent d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 border border-0">
-                        <div id="txtRise" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0"></div>  
+                        <div id="txtRise" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
+                        <div id="txtSet" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
                     </div>
                     <div class="card-body col-6 border border-0">
                         <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark">
@@ -76,7 +77,9 @@
                         </div>
                     </div>
                     <div class="card-body col-6 border border-0">
-                        <div id="txtSet" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
+                        <div id="txtLight" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
+                        <div id="txtShine" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
+                        
                     </div>
                 </div>
             </div>
@@ -133,6 +136,12 @@
             if(strDir >= 225 && strDir < 315){
                 $('#txtDir').append(`<h2 class="text-dark">${strDir}°W</h2>`)
             }
+
+            $('#txtRise').append(`<h2 class="text-dark">${strRise}%</h2>`)
+            $('#txtSet').append(`<h2 class="text-dark">${strSet}%</h2>`)
+            $('#txtLight').append(`<h2 class="text-dark">${strLight}%</h2>`)
+            $('#txtShine').append(`<h2 class="text-dark">${strShine}%</h2>`)
+
         })
     }
     </script>
