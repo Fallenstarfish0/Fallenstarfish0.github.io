@@ -142,8 +142,8 @@
                 $('#txtDir').append(`<h2 class="text-dark">${strDir}°W</h2>`)
             }
 
-            $('#txtRise').append(`<h2 class="text-dark">${strRise.at(0)}</h2>`)
-            $('#txtSet').append(`<h2 class="text-dark">${strSet.at(0)}</h2>`)
+            $('#txtRise').append(`<h2 class="text-dark">${strRise.at(0).slice(11,16)}</h2>`)
+            $('#txtSet').append(`<h2 class="text-dark">${strSet.at(0).slice(11,16)}</h2>`)
             $('#txtLight').append(`<h2 class="text-dark">${strLight.at(0)}Hours</h2>`)
             $('#txtShine').append(`<h2 class="text-dark">${strShine.at(0)}Hours</h2>`)
 
