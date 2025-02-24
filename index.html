@@ -33,8 +33,10 @@
             <div class="row card d-flex justify-content-center align-items-center col-12">
                 <div class="bg-transparent d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 border border-0">
-                        <div id="txtRise" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
-                        <div id="txtSet" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-0 h-100"></div>  
+                        <div class="card bg-secondary rounded col-6 justify-content-center align-items-center border border-0 h-100">
+                            <div id="txtRise"></div>  
+                            <div id="txtSet"></div>  
+                        </div>
                     </div>
                     <div class="card-body col-6 border border-0">
                         <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark">
@@ -118,14 +120,6 @@
             let strLight = objData.daily.daylight_duration
             let strShine = objData.daily.sunshine_duration
 
-            strRise = strRise.toISOString();
-            strSet = strSet.toISOString();
-
-            let strLightMin = strLight/60;
-            strLight = strLightMin/60;
-
-            let strShineMin = strLight/60;
-            strShine = strLightMin/60;
 
 
             $('#txtTemp').append(`<h2 class="text-light">${strTemp}°F</h2>`)
