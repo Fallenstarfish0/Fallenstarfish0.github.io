@@ -9,18 +9,15 @@
 </head>
 <body class="bg-light">
     <div class="d-flex  justify-content-center align-items-center col-12 border border-0 vh-100  ">
-        <form class="card bg-transparent col-12 col-md-8 col-lg-6 mt-5 border border-0" id="frmLogin"> 
             <div class="card bg-transparent d-flex justify-content-center align-items-center border border-0 ">
                 <div class="card bg-transparent col-12 col-md-8 col-lg-6 justify-content-center align-items-center border border-0 ">
-                    <div id="txtCard1" class="card bg-dark rounded col-12 justify-content-center align-items-center border border-dark ">
-                        <div id="txtTemp" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
-                            <h3 class="text-light">Temperature</h3>
-                            <h1 class="text-primary bi bi-thermometer-low"></h1>
-                        </div>
-                        <div id="txtSpeed" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
-                            <h3 class="text-light">Wind Speed</h3>
-                            <h1 class="text-primary bi bi-wind"></h1>
-                        </div>
+                    <div id="txtTemp" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
+                        <h3 class="text-light">Temperature</h3>
+                        <h1 class="text-primary bi bi-thermometer-low"></h1>
+                    </div>
+                    <div id="txtSpeed" class="card bg-dark rounded col-6 justify-content-center align-items-center border border-dark ">
+                        <h3 class="text-light">Wind Speed</h3>
+                        <h1 class="text-primary bi bi-wind"></h1>
                     </div>
                     <div  id="txtHumidity" class="card bg-secondary rounded col-12 mt-4 justify-content-center align-items-center border border-dark ">
                         <h3 class="text-dark">Humidity</h3>
@@ -32,7 +29,6 @@
                     </div>
                 </div>
             </div>
-        </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -69,7 +65,7 @@
             $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
 
-            $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}</h2>`)
+            $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}MPH</h2>`)
             $('#txtHumidity').append(`<h2 class="text-dark">${strDir}</h2>`)
             $('#txtCloud').append(`<h2 class="text-dark">${strGust}</h2>`)
         })
