@@ -33,14 +33,14 @@
             <div class="row card d-flex justify-content-center align-items-center col-12">
                 <div class="bg-transparent d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 pl-0 pr-0 border border-0">
-                        <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtTemp"></div></div>
-                        <div class="card bg-secondary rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtHumidity"></div></div>
-                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtCloud"></div></div>
+                        <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtTemp">Temperature</div></div>
+                        <div class="card bg-secondary rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtHumidity">Humidity</div></div>
+                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtCloud">Could Coverage</div></div>
                     </div>
                     <div class="card-body col-6 pl-0 pr-0 border border-0">
-                        <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtSpeed"></div></div>
-                        <div class="card bg-secondary rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtDir"></div></div>
-                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtGust"></div></div>
+                        <div class="card bg-dark rounded text-light col-12 justify-content-center align-items-center border border-dark"><div id="txtSpeed">Wind Speed</div></div>
+                        <div class="card bg-secondary rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtDir">Wind Direction</div></div>
+                        <div class="card bg-transparent rounded text-dark col-12 justify-content-center align-items-center border border-dark"><div id="txtGust">Wind Gust</div></div>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
             $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
 
             $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}MPH</h2>`)
-            $('#txtGust').append(`<h2 class="text-dark">${strGust}</h2>`)
+            $('#txtGust').append(`<h2 class="text-dark">${strGust}MPH</h2>`)
 
             if(strDir >= 0 && strDir < 45 || strDir >= 315 && strDir < 360){
                 $('#txtDir').append(`<h2 class="text-dark">${strDir}°N</h2>`)
