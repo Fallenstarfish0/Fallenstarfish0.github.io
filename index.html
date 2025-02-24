@@ -47,7 +47,7 @@
 
             let strTemp = objData.current.temperature_2m
             let strHum = objData.minutely_15.relative_humidity_2m
-            let strCloud = objData.current.cloud_cover
+            //let strCloud = objData.current.cloud_cover
 
             $('#txtTemp').append(`<h2 class="text-light">${strTemp}°F</h2>`)
             $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
