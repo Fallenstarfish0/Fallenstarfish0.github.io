@@ -14,45 +14,45 @@
                 <div class="bg-dark d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 border border-0">
                         <div id="txtTemp" class="card bg-transparent rounded col-12 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-light text-center">Temp</h2>
-                            <h1 class="text-primary bi bi-thermometer-low"></h1>
+                            <h3 class="text-light text-center">Temp</h3>
+                            <h2 class="text-primary bi bi-thermometer-low"></h2>
                         </div>
                     </div>
 
                     <div class="card-body col-6 border border-0">
                         <div id="txtSpeed" class="card bg-transparent rounded col-12 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-light text-center">Wind Speed</h2>
-                            <h1 class="text-primary bi bi-speedometer"></h1>
+                            <h3 class="text-light text-center">Wind Speed</h3>
+                            <h2 class="text-primary bi bi-speedometer"></h2>
                         </div>
                     </div>
                 </div>
                 <div class="bg-secondary d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 border border-0">
                         <div  id="txtHumidity" class="card bg-transparent rounded col-12 mt-4 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-dark text-center">Humidity</h2>
-                            <h1 class="text-primary bi bi-droplet-half"></h1>
+                            <h3 class="text-dark text-center">Humidity</h3>
+                            <h2 class="text-primary bi bi-droplet-half"></h2>
                         </div>
                     </div>
 
                     <div class="card-body col-6 border border-0">
                         <div  id="txtDir" class="card bg-transparent rounded col-12 mt-4 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-dark text-center">Wind Direction</h2>
-                            <h1 class="text-primary bi bi-compass"></h1>
+                            <h3 class="text-dark text-center">Wind Direction</h3>
+                            <h2 class="text-primary bi bi-compass"></h2>
                         </div>
                     </div>
                 </div>
                 <div class="bg-transparent d-flex justify-content-center align-items-center col-12">
                     <div class="card-body col-6 border border-0">
                         <div id="txtCloud" class="card bg-transparent rounded col-12 mt-4 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-dark text-center">Cloudiness</h2>
-                            <h1 class="text-primary bi bi-clouds"></h1>
+                            <h3 class="text-dark text-center">Cloudiness</h3>
+                            <h2 class="text-primary bi bi-clouds"></h2>
                         </div>
                     </div>
 
                     <div class="card-body col-6 border border-0">
                         <div id="txtGust" class="card bg-transparent rounded col-12 mt-4 justify-content-center align-items-center border border-0 ">
-                            <h2 class="text-dark text-center">Wind Gust</h2>
-                            <h1 class="text-primary bi bi-wind"></h1>
+                            <h3 class="text-dark text-center">Wind Gust</h3>
+                            <h2 class="text-primary bi bi-wind"></h2>
                         </div>
                     </div>
                 </div>
@@ -113,24 +113,24 @@
 
 
 
-            $('#txtTemp').append(`<h2 class="text-light">${strTemp}°F</h2>`)
-            $('#txtHumidity').append(`<h2 class="text-dark">${strHum.at(0)}%</h2>`)
-            $('#txtCloud').append(`<h2 class="text-dark">${strCloud}%</h2>`)
+            $('#txtTemp').append(`<h3 class="text-light">${strTemp}°F</h3>`)
+            $('#txtHumidity').append(`<h3 class="text-dark">${strHum.at(0)}%</h3>`)
+            $('#txtCloud').append(`<h3 class="text-dark">${strCloud}%</h3>`)
 
-            $('#txtSpeed').append(`<h2 class="text-light">${strSpeed}MPH</h2>`)
-            $('#txtGust').append(`<h2 class="text-dark">${strGust}MPH</h2>`)
+            $('#txtSpeed').append(`<h3 class="text-light">${strSpeed}MPH</h3>`)
+            $('#txtGust').append(`<h3 class="text-dark">${strGust}MPH</h3>`)
 
             if(strDir >= 0 && strDir < 45 || strDir >= 315 && strDir < 360){
-                $('#txtDir').append(`<h2 class="text-dark">${strDir}°N</h2>`)
+                $('#txtDir').append(`<h3 class="text-dark">${strDir}°N</h3>`)
             }
             if(strDir >= 45 && strDir < 135){
-                $('#txtDir').append(`<h2 class="text-dark">${strDir}°E</h2>`)
+                $('#txtDir').append(`<h3 class="text-dark">${strDir}°E</h3>`)
             }
             if(strDir >= 135 && strDir < 225){
-                $('#txtDir').append(`<h2 class="text-dark">${strDir}°S</h2>`)
+                $('#txtDir').append(`<h3 class="text-dark">${strDir}°S</h3>`)
             }
             if(strDir >= 225 && strDir < 315){
-                $('#txtDir').append(`<h2 class="text-dark">${strDir}°W</h2>`)
+                $('#txtDir').append(`<h3 class="text-dark">${strDir}°W</h3>`)
             }
 
         })
